@@ -1,6 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  word = word.toLowerCase();
+    // Initialize left and right pointers
+    let left = 0;
+    let right = word.length - 1;
+
+    // Loop through the word from both ends
+    while (left < right) {
+        // If characters at both pointers don't match, it's not a palindrome
+        if (word[left] !== word[right]) {
+            return false;
+        }
+        // Move the pointers towards the center
+        left++;
+        right--;
+    }
+    // If the loop completes without returning false, it's a palindrome
+    return true;
 }
+  
 
 /* 
   Add your pseudocode here
